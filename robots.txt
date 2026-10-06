@@ -1,0 +1,18 @@
+# Search crawlers must be able to read the noindex directives in our HTML
+# and HTTP response headers. Other automated crawling is not permitted.
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+User-agent: Baiduspider
+User-agent: YandexBot
+Allow: /
+
+# Google uses this separate token for Gemini training and grounding.
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: *
+Disallow: /
