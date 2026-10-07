@@ -1,18 +1,16 @@
-# Search crawlers must be able to read the noindex directives in our HTML
-# and HTTP response headers. Other automated crawling is not permitted.
-User-agent: Googlebot
-User-agent: Googlebot-Image
-User-agent: Googlebot-Video
-User-agent: Bingbot
-User-agent: DuckDuckBot
-User-agent: Applebot
-User-agent: Baiduspider
-User-agent: YandexBot
-Allow: /
-
-# Google uses this separate token for Gemini training and grounding.
+# Allow public company-site validation and let search crawlers read noindex.
+# Indexing is separately disabled in HTML and the X-Robots-Tag header.
+# These explicit exclusions request that named AI/data-collection crawlers
+# do not collect this site. They do not make the public site private.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Bytespider
 User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: cohere-ai
 Disallow: /
 
 User-agent: *
-Disallow: /
+Allow: /
